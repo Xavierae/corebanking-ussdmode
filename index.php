@@ -8,8 +8,8 @@ $text        = $_POST["text"];
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome to Xearth Core Banking \n";
-    $response .= "1. My Account \n";
-    $response .= "2. My phone number";
+    $response .= "1. Account Detail \n";
+    $response .= "2. Check Balance";
     /* $response .= "3. Register \n";
     $response .= "4. Send Money";
     $response .= "5. Check Balance \n";
@@ -17,17 +17,17 @@ if ($text == "") {
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response = "CON Choose account information you want to view \n";
-    $response .= "1. Account number \n";
+    $response = "CON Your personal information \n";
+    $response .= "1. Audited \n";
 
 } else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "END Your phone number is ".$phoneNumber;
+    $response = "Your total balance is ".$phoneNumber;
 
 } else if($text == "1*1") { 
     // This is a second level response where the user selected 1 in the first instance
-    $accountNumber  = "ACC1001";
+    $accountNumber  = "XAVIERASSI001";
 
     // This is a terminal request. Note how we start the response with END
     $response = "END Your account number is ".$accountNumber;
