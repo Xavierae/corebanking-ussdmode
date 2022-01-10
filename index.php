@@ -10,6 +10,10 @@ if ($text == "") {
     $response  = "CON Welcome to Xearth Core Banking \n";
     $response .= "1. My Account \n";
     $response .= "2. My phone number";
+    $response .= "1. Register \n";
+    $response .= "2. Send Money";
+    $response .= "1. Check Balance \n";
+    $response .= "2. Withdraw Cash";
 
 } else if ($text == "1") {
     // Business logic for first level response
